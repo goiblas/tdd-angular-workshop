@@ -24,16 +24,16 @@ describe('CompetitionRoutingModule', () => {
     router = TestBed.get(Router);
   });
 
-  xit('18. should navigate to the competitions list', () => {
+  xit('18. should navigate to the competitions list', async(() => {
     router.navigate(['competitions']).then(() => {
       expect(location.path()).toBe('/competitions');
     });
-  });
+  }));
 
-  xit('19. should navigate to the competition details', () => {
+  xit('19. should navigate to the competition details', async(() => {
     router.navigate(['competitions', '53']).then(() => {
       expect(location.path()).toBe('/competitions/53');
     });
-  });
+  }));
 
 });
